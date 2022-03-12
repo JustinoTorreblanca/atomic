@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+.arrow {
+  transform: rotate(90deg);
+  font-weight: 900;
+}
+.tableContainer {
+  width: 300px;
+  overflow: scroll;
+  bottom: 55px;
+}
+.container {
+  min-height: 245vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+th {
+  padding: 30px 20px;
+}
+td {
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.headAtomic {
+  border-top-right-radius: 10px;
+  background-color: #e9f1f6;
+}
+.columnAtomic {
+  background-color: #e9f1f6;
+}
+
+.alignLeft {
+  text-align: left;
+  padding: 0px 20px;
+}
+.paddingBottom {
+  padding: 0 0 20px 0px;
+}
+
+.borderLeft {
+  border-left: 3px solid #f0f0f0;
+}
+.borderTopBottom {
+  border-top: 3px solid #f0f0f0;
+  border-bottom: 3px solid #f0f0f0;
+}
+table {
+  border-spacing: 0px;
+}
+.borderAtomic {
+  border-top: 2px solid lightgrey;
+  border-bottom: 2px solid lightgrey;
+}
+
+@media (min-width: 520px) {
+  .tableContainer {
+    width: 500px;
+    bottom: 50px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (min-width: 675px) {
+  .tableContainer {
+    bottom: 40px;
+  }
+  .container {
+    min-height: 195vh;
+  }
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
+@media (min-width: 768px) {
+  .arrow {
     transform: rotate(0deg);
+    width: 35px;
+    height: 35px;
   }
-  to {
-    transform: rotate(360deg);
+  .tableContainer {
+    width: 700px;
+    bottom: 41px;
+    overflow: unset;
+  }
+}
+
+@media (min-width: 944px) {
+  .container {
+    min-height: 165vh;
+  }
+  .tableContainer {
+    bottom: 24px;
+  }
+}
+
+@media (min-width: 1152px) {
+  .arrow {
+    width: 45px;
+    height: 45px;
+  }
+  .tableContainer {
+    width: auto;
+  }
+}
+@media (min-width: 1255px) {
+  .container {
+    min-height: 125vh;
+    padding: 0px 0px 50px;
   }
 }

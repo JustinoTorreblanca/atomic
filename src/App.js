@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Hero from "./components/Hero";
+import GlobalStyle from "./GlobalStyles";
+import Flex from "./components/atoms/Flex";
+import Banner from "./components/Banner";
+import PorQueAtomic from "./components/PorQueAtomic";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Flex flexDirection="column">
+      <GlobalStyle />
+
+      <Hero />
+      <Banner />
+      <PorQueAtomic />
+      <Footer />
+    </Flex>
   );
 }
 
