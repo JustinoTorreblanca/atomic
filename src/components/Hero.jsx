@@ -3,6 +3,8 @@ import Typography from "./atoms/Typography";
 
 import Header from "./Header";
 import ButtonQuieroSerParte from "./ButtonQuieroSerParte";
+import Banner from "./Banner";
+import PorQueAtomic from "./PorQueAtomic";
 
 import heroLaptop from "../assets/heroLaptop.png";
 import astronautaHero from "../assets/astronautaHero.png";
@@ -10,32 +12,40 @@ import arrowSaberMas from "../assets/arrowSaberMas.png";
 
 const Hero = () => {
   return (
-    <Flex
-      backgroundImage={`url(${heroLaptop})`}
-      //backgroundPosition="center"
-      backgroundSize="cover"
-      backgroundRepeat="no-repeat"
-      minHeight="100vh"
-      width="100%"
-      flexDirection="column"
-    >
-      <Header />
-      <Flex flexDirection="column" justifyContent="center" alignItems="center">
+    <>
+      <Flex
+        backgroundImage={`url(${heroLaptop})`}
+        //backgroundPosition="center"
+        backgroundSize="cover"
+        backgroundRepeat="no-repeat"
+        minHeight="100vh"
+        width="100%"
+        flexDirection="column"
+      >
+        <Header />
         <Flex
-          width="100%"
-          //height="75vh"
-          justifyContent={["start", "space-evenly"]}
+          flexDirection="column"
+          justifyContent="center"
           alignItems="center"
-          flexDirection={["column", "row"]}
-          maxWidth={["1000px", "1200px"]}
-          mx="auto"
         >
-          <AstronautaHero />
-          <HeroText />
+          <Flex
+            width="100%"
+            //height="75vh"
+            justifyContent={["start", "space-evenly"]}
+            alignItems="center"
+            flexDirection={["column", "row"]}
+            maxWidth={["1000px", "1200px"]}
+            mx="auto"
+          >
+            <AstronautaHero />
+            <HeroText />
+          </Flex>
+          <ButtonSaberMas />
         </Flex>
-        <ButtonSaberMas />
       </Flex>
-    </Flex>
+      <Banner />
+      <PorQueAtomic />
+    </>
   );
 };
 
@@ -105,18 +115,20 @@ const HeroText = () => {
 
 const ButtonSaberMas = () => {
   return (
-    <Flex flexDirection="column" alignItems="center">
-      <Flex
-        backgroundImage={`url(${arrowSaberMas})`}
-        height={["45px", "50px", "60px"]}
-        width={["45px", "50px", "60px"]}
-        backgroundPosition="center"
-        backgroundSize="cover"
-        backgroundRepeat="no-repeat"
-      />
-      <Typography color="white" variant={["caption4", "caption3"]}>
-        Quiero saber más
-      </Typography>
-    </Flex>
+    <a href="#banner">
+      <Flex flexDirection="column" alignItems="center">
+        <Flex
+          backgroundImage={`url(${arrowSaberMas})`}
+          height={["45px", "50px", "60px"]}
+          width={["45px", "50px", "60px"]}
+          backgroundPosition="center"
+          backgroundSize="cover"
+          backgroundRepeat="no-repeat"
+        />
+        <Typography color="white" variant={["caption4", "caption3"]}>
+          Quiero saber más
+        </Typography>
+      </Flex>
+    </a>
   );
 };

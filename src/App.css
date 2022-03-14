@@ -8,7 +8,8 @@
   bottom: 55px;
 }
 .container {
-  min-height: 245vh;
+  height: 250vh;
+  max-height: 1633px;
 }
 
 th {
@@ -49,6 +50,88 @@ table {
   border-bottom: 2px solid lightgrey;
 }
 
+a {
+  text-decoration: none;
+}
+label {
+  margin: 0px 0px 8px;
+}
+input {
+  margin: 0 0 10px;
+  width: 100%;
+  height: 30px;
+  text-align: left;
+  padding: 5px;
+  max-width: 272px;
+}
+.checkbox-terminos {
+  width: 7%;
+  max-width: 20px;
+  height: 20px;
+  margin: 0 10px 0px 0px;
+}
+form {
+  width: 272px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.red {
+  background-color: #fa4d09;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.redStep1 {
+  background-color: #fa4d09;
+  border-radius: 10px;
+}
+.redStep2 {
+  background-color: #fa4d09;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.borderUnset1 {
+  border-radius: 10px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background-color: #fa4d09;
+}
+.borderUnset {
+  background-color: #fa4d09;
+  border-radius: 10px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+button:disabled,
+button[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.modal {
+  display: none;
+}
+.modal.is-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.1s;
+}
+.checkbox-terminos:hover {
+  cursor: pointer;
+}
+a:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 @media (min-width: 520px) {
   .tableContainer {
     width: 500px;
@@ -61,7 +144,7 @@ table {
     bottom: 40px;
   }
   .container {
-    min-height: 195vh;
+    height: 200vh;
   }
 }
 
@@ -76,14 +159,23 @@ table {
     bottom: 41px;
     overflow: unset;
   }
+  .container {
+    max-height: 1346px;
+  }
 }
 
 @media (min-width: 944px) {
   .container {
-    min-height: 165vh;
+    height: 260vh;
+    max-height: 1250px;
   }
   .tableContainer {
     bottom: 24px;
+  }
+}
+@media (min-width: 1030px) {
+  .container {
+    max-height: 870px;
   }
 }
 
@@ -95,10 +187,17 @@ table {
   .tableContainer {
     width: auto;
   }
-}
-@media (min-width: 1255px) {
   .container {
-    min-height: 125vh;
-    padding: 0px 0px 50px;
+    max-height: 1346px;
+  }
+}
+@media (min-width: 1253px) {
+  .container {
+    max-height: 923px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    max-height: 890px;
   }
 }

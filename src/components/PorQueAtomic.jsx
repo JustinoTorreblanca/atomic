@@ -18,6 +18,7 @@ const PorQueAtomic = () => {
         borderTopRightRadius={["90px", "140px"]}
         borderTopLeftRadius={["90px", "140px"]}
         className="container"
+        //maxHeight={["1633px", " 1346px", "1357px"]}
       >
         <Beneficios />
       </Flex>
@@ -38,6 +39,7 @@ const Beneficios = () => {
       my={["10px", "50px"]}
       justifyContent="center"
       alignItems="center"
+      maxWidth="1440px"
     >
       <Flex
         flexDirection="column"

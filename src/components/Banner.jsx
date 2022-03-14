@@ -17,6 +17,7 @@ const Banner = () => {
       pt="2em"
       alignItems="center"
       backgroundColor={"#072348"}
+      id="banner"
     >
       <Typography
         color="white"

@@ -135,6 +135,11 @@ const Typography = styled.span.attrs((props) => ({
         fontWeight: "700",
         fontSize: "14px",
       },
+      caption9: {
+        fontFamily: "Montserrat",
+        fontWeight: "400",
+        fontSize: "12px",
+      },
 
       btnPrimary: {
         fontFamily: "Montserrat",
